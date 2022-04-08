@@ -51,7 +51,7 @@ height: 30px;
 width: 100%;
 }
                     
-<!-- Apex -->
+<!-- Con Apex se intenta mostrar más o menos un recorrido backend pero claramente no hay conexión entre el back y el front. Y termina siendo una especie de "guía" -->
    List<Contact> conList = new List <Contact> {
     new Contact(Nombre:'Mario', Altura=170, Genero=' ', Color de cabello='Marrón', Color de ojos='Marrones', DNI=32568741), 
     new Contact(Nombre:'Carla', Altura=165, Genero='F', Color de cabello='Rubio', Color de ojos='Marrones', DNI=40669823),
