@@ -1,0 +1,71 @@
+<aura:component >
+    <!-- Este es el HTML y CSS donde se intenta darle 
+	un formato más ameno -->
+    </head>
+     <link rel="stylesheet" href="form-gl.css"> 
+        <body>
+            <form id="form">
+                <tr>Nombre:</tr><br>
+                <input type="text" name="nombre" id="name"><br>
+                <tr>Altura:</tr> <br>
+                <input type="number" name="altura" id="height"><br>
+                <tr>Género:</tr> <br>
+                <input type="text" name="género" id="gender"><br>
+                <tr>Color de cabello:</tr><br>
+                <input type="text" name="color-cabello" id="hair_color"><br>
+                <tr>Color de ojos:</tr><br>
+                <input type="text" name="color-ojos" id="eyes_color"><br>
+                <tr>Número de DNI:</tr><br>
+                <input type="number" name="dni" id="DNI"><br><br>
+                <button id="button">Buscar</button>
+
+            </form>
+                    
+ <!--CSS-->
+                    body  {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    font-size:18px;
+    font-family: sans-serif;
+    }
+
+input {
+    border:none;
+    color: transparent;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2px;
+}
+
+button {
+font-family: sans-serif;
+font-size: 100%;
+text-align: center;
+justify-content:center;
+background-color: rgb(56, 120, 216);
+color:white;
+border-radius: 5px;
+border-color: white;
+height: 30px;
+width: 100%;
+}
+                    
+<!-- Apex -->
+   List<Contact> conList = new List <Contact> {
+    new Contact(Nombre:'Mario', Altura=170, Genero=' ', Color de cabello='Marrón', Color de ojos='Marrones', DNI=32568741), 
+    new Contact(Nombre:'Carla', Altura=165, Genero='F', Color de cabello='Rubio', Color de ojos='Marrones', DNI=40669823),
+    new Contact(Nombre:'Fabricio', Altura=177, Genero='M', Color de cabello='Negro', Color de ojos=' ', DNI=37523665),
+    new Contact(Nombre:'Martina', Altura=158, Genero='F', Color de cabello='Marrón', Color de ojos='Verdes', DNI=' ');}
+insert conList;
+List<Contact> listToUpdate = new List<Contact>();
+Contact Mario = new Contact(Nombre='Mario', Altura=170, Genero=' ', Color de cabello='Marrón', Color de ojos='Marrones', DNI=32568741);       
+insert Mario;
+
+Mario.Genero = 'Josh\'s Masculino has been updated by the upsert operation.';
+
+List<Contact> contact = new List<Contact> { Mario };
+
+upsert contact;
+                    
+</aura:component>
