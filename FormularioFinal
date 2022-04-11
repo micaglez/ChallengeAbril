@@ -1,0 +1,111 @@
+<!-- Al principio del ejercicio empecé a realizar el código desde VSC. Es un intento de darle un poco de formato y centrarnos en el área de trabajo -->
+
+<!--VSC - HTML -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="form-gl.css">
+    <script src="JS/form-glo.js"></script>
+   <!-- <script type="text/javascript">
+     <!-- function basecontactos()
+   
+var name = document.getElementById('name').value;
+var height = parseFloat(document.getElementById('height').value);
+        var gender = document.getElementById('gender').value;
+        var hair_color = document.getElementById('hair_color').value;
+        var eyes_color = document.getElementById('eyes_color').value;
+        var DNI = parseFloat(document.getElementById('DNI').value);
+
+document.registro.name.value = name;
+document.registro.he.value = height;
+document.registro.ge.value = gender;
+document.registro.ha.value = hair_color;
+document.registro.ey.value = eyes_color;
+document.registro.dni.value = DNI;
+}
+     
+
+ </script> -->
+    </head>
+
+<body>
+   
+        <form id="form">
+                <tr>Nombre:</tr><br>
+                <input type="text" name="nombre" id="name"><br>
+                <tr>Altura:</tr> <br>
+                <input type="number" name="altura" id="height"><br>
+                <tr>Género:</tr> <br>
+                <input type="text" name="género" id="gender"><br>
+                <tr>Color de cabello:</tr><br>
+                <input type="text" name="color-cabello" id="hair_color"><br>
+                <tr>Color de ojos:</tr><br>
+                <input type="text" name="color-ojos" id="eyes_color"><br>
+                <tr>Número de DNI:</tr><br>
+                <input type="number" name="dni" id="DNI"><br><br>
+                <button type="button" onclick="datosclientes()" id="button">Buscar</button>
+
+            </form>
+
+            <!--<form>
+                <tr>Nombre: <input type="text" name="name" id="name">  </tr>
+
+            </form>-->
+   
+</body>
+   
+</html>
+
+
+<!-- CSS -->
+
+body  {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    font-size:18px;
+    font-family: sans-serif;
+    color:black;
+    }
+
+input {
+    border:none;
+    color: black;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2px;
+}
+
+button {
+font-family: sans-serif;
+font-size: 100%;
+text-align: center;
+justify-content:center;
+background-color: rgb(56, 120, 216);
+color:black;
+border-radius: 5px;
+border-color: white;
+height: 30px;
+width: 100%;
+}
+
+
+<!-- JAVASCRIPT VSC-->
+
+const getId = document.getElementById("button");
+
+function datosclientes(){
+    var Nombre=document.getElementById("name").value;
+        console.log(Nombre);
+    var Altura=document.getElementById("height").value;
+        console.log(Altura);
+    var Género=document.getElementById("gender").value;
+        console.log(Género)
+    var hair_color=document.getElementById("hair_color").value;
+        console.log(hair_color);
+    var eyes_color=document.getElementById("eyes_color").value;
+        console.log(eyes_color);
+    var DNI=document.getElementById("DNI").value;
+        console.log(DNI);
